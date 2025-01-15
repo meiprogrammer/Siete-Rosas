@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'register.css' %}" rel="stylesheet">
+    <script src="{% static 'register.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    {% if integrity %}
+        <div class="message">
+            <h2>{{ integrity }}</h2>
+        </div>
+    
+    {% elif passkey %}
+        <div class="message">
+            <h2>{{ passkey }}</h2>
+        </div>
+    {% endif %}
+
+    <div class="enterDiv">
+        
+        <form action="register" method="POST">
+            {% csrf_token %}
+            <div class="formDiv">
+                <input autofocus class="enterInput" type="text" name="username" placeholder="Nome">
+                <input class="enterInput" type="email" name="email" placeholder="Email">
+                <input class="enterInput" type="password" name="password" placeholder="Senha">
+                <input class="enterInput" type="password" name="confirmation" placeholder="Confirmação de senha">
+                <input class="enterSubmit" type="submit">
+            </div>
+        </form>
+        
+        <p class="bottomText">Já tem uma conta? Acesse ela <a href="login">aqui!</a></p>
+    </div> 
+{% endblock %}

@@ -1,0 +1,48 @@
+#indexDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+body {
+    overflow: hidden;
+}
+
+#buyButton {
+    text-align: center;
+    border: 0;
+    font-size: 1.5vw;
+    border-radius: 1vw;
+    background-color: white;
+    margin-top: 28vw;
+    width: 20vw;
+    height: 4vw;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#buyButton:hover {
+    transform: scale(1.05);
+}
+
+#buyLink {
+    text-decoration: none;
+    color: black;
+
+}
+
+@media (max-width: 800px) {
+    #buyButton {
+        width: 65vw;
+        border-radius: 2.35vw;
+        height: 12vw;
+        font-size: 5vw;
+
+    }
+
+    body {
+        background-position: center;
+        background-size: cover;
+    }
+}

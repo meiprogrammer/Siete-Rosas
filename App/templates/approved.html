@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+    <script src="{% static 'result.js' %}"></script>
+    <link href="{% static 'checkout.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <button id="redirectButton">Voltar</button>       
+        <div id="mainA">
+            <img id="responseIcon" src="{% static './images/success.png' %}">
+            <h2>Compra efeutada com sucesso, você receberá seu produto em até 30 dias úteis, caso ocorra algum erro, contate sieterosas.flamencas@gmail.com</h2>
+        </div>
+    </div>  
+{% endblock %}

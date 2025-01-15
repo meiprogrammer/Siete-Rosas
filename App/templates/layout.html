@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Siete Rosas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{% static '/images/favicon.ico' %}">
+        <meta name="csrf-token" content="{{ csrf_token }}">
+        <link href="{% static 'layout.css' %}" rel="stylesheet">
+        <script src="{% static 'layout.js' %}"></script>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body id="mainBody">
+        <header id="navBar">
+            <img id="logo" src="{% static '/images/logo.png' %}">
+            <div id="linksNav">
+                <a class="navLink" href="{% url 'logout' %}">Sair</a>
+                <a class="navLink" href="{% url 'events' %}">Eventos</a>
+                <button id="productsButton"><a class="navLink" href="{% url 'products' %}">Produtos</a></button>
+            </div>
+        </header>
+
+        <div id="extensionBody">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

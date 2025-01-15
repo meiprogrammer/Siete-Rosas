@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+    <script src="{% static 'result.js' %}"></script>
+    <link href="{% static 'checkout.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <button id="redirectButton">Voltar</button>       
+        <div id="mainF">
+            {% if status == "failure" %}
+                <img id="responseIcon" src="{% static './images/failure.png' %}">
+                <h2>Sua compra não foi efetuada, você não foi debitado(a).</h2>
+            {% elif status == "pending" %}
+                <img id="responseIcon" src="{% static './images/pending.png' %}">
+                <h2>Compra pendente, caso tenha sido debitado(a), entre em contanto com sieterosas.flamencas@gmail.com</h2>
+            {% endif %}
+        </div>   
+    </div>  
+{% endblock %}

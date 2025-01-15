@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+    <script src="{% static 'index.js' %}" defer></script>
+{% endblock %}
+
+{% block body %}
+    <div id="indexDiv">
+        <button id="buyButton"><a id="buyLink" href="products">Compre seu sapato agora!</a></button>
+    </div>
+{% endblock %}

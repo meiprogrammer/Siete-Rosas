@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'register.css' %}" rel="stylesheet">
+    <script src="{% static 'register.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div class="message">
+        <h2>Código de verificação enviado ao seu email.</h2>
+    </div>
+
+    <div class="enterDiv"> 
+        <form action="{% url 'verifyMail' %}" method="POST">
+            {% csrf_token %}
+            <div class="formDiv">
+                <input autofocus class="enterInput" type="number" id="code" name="code" placeholder="Código de verificação" required>
+                <input type="hidden" name="email" id="email"  value="{{ email }}">
+                <input type="hidden" name="password" id="password"  value="{{ password }}">
+                <input type="hidden" name="username" id="username"  value="{{ username }}">
+                <input class="enterSubmit" type="submit">
+            </div>
+        </form>
+    </div> 
+{% endblock %}

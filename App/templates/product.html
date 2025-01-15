@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'product.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div id="productInfos">
+        <div id="firstDiv">
+            <img id="productPhoto" src="/static/images/Sapatos/{{ product.name }}.jpeg">
+            <div id="secondDiv">
+                <h1 id="name">{{ product.name }}</h1>
+                
+                <ul>
+                    <li>
+                        <p>Preço: R$ {{ product.price }}</p>
+                    </li>
+                    <li>
+                        <p>Entrega entre 15 a 30 dias</p>
+                    </li>
+                    <li>
+                        <p>Produto 100% artesanal</p>
+                    </li>
+                </ul>
+
+                <form action="/checkout/{{ product.id }}/address" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" id="productId" value="{{ productId }}">
+                    <button id="buyButton" type="submit">Compre este sapato agora!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

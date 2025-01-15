@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'products.css' %}" rel="stylesheet">
+    <script src="{% static 'products.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="productsMain">
+        {% for product in products %}
+        <div class="productMain">
+            <div class="productClass" id="{{ product.id }}" style="background-image: url('/static/images/Sapatos/{{ product.name }}.jpeg');"></div>
+            <p class="productInfo">{{ product.name }}</p>
+            <hr>
+            <p class="productInfo">R$ {{ product.price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
