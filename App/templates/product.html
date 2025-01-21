@@ -8,7 +8,7 @@
 {% block body %}
     <div id="productInfos">
         <div id="firstDiv">
-            <img id="productPhoto" src="/static/images/Sapatos/{{ product.name }}.jpeg">
+            <img id="productPhoto" src="{% static 'images/Sapatos/' %}{{ product.name }}.jpeg">
             <div id="secondDiv">
                 <h1 id="name">{{ product.name }}</h1>
                 

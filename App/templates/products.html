@@ -10,7 +10,7 @@
     <div class="productsMain">
         {% for product in products %}
         <div class="productMain">
-            <div class="productClass" id="{{ product.id }}" style="background-image: url('/static/images/Sapatos/{{ product.name }}.jpeg');"></div>
+            <img class="imgClass" id="{{ product.id }}" src="{% static 'images/Sapatos/' %}{{ product.name }}.jpeg">
             <p class="productInfo">{{ product.name }}</p>
             <hr>
             <p class="productInfo">R$ {{ product.price }}</p>

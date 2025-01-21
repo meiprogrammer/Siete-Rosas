@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.productClass').forEach((product) => {
+    document.querySelectorAll('.imgClass').forEach((product) => {
         product.addEventListener('click', () => { 
             window.location.replace(`/product/${product.id}`);
         })

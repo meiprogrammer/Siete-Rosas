@@ -32,8 +32,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = DJANGO_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['.heroku.app', '127.0.0.1', 'www.mercadopago.com.br', 'localhost']
+DEBUG = True
+ALLOWED_HOSTS = ['.herokuapp.com', 'sieterosas.com.br', 'www.sieterosas.com.br', '127.0.0.1', 'localhost']
 
 # Application definition
 INSTALLED_APPS = [

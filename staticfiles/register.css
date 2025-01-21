@@ -1,0 +1,79 @@
+body {
+    overflow: hidden;
+}
+
+.message {
+    text-align: center;
+    justify-content: center;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.formDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.enterDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+    margin-top: 5vw;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.enterInput, .enterSubmit {
+    width: 100%;
+    max-width: 400px;
+    height: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 0.15vw solid rgb(216, 216, 216);
+    border-radius: 0.4vw;
+    transition: 0.35s ease;
+    font-size: 1.75rem;
+}
+
+.enterSubmit {
+    border: 0.15vw solid rgb(157, 255, 0);
+    cursor: pointer;
+    width: 102%;
+}
+
+.enterSubmit:hover, .enterInput:hover {
+    transform: scale(1.1);
+}
+
+.bottomText {
+    font-size: 1.75vw;
+    margin-top: 2rem;
+}
+
+@media (max-width: 560px) and (orientation: portrait) {
+    .bottomText {
+        font-size: 7vw;
+    }
+
+    .enterSubmit, .enterInput {
+        border-radius: 1.25vw;
+    }
+
+    .enterDiv {
+        margin-top: 15vw;
+    }
+}
+
+@media (min-width: 590px) and (orientation: portrait) and (max-width: 960px) {
+    .bottomText {
+        font-size: 5vw;
+    }
+}

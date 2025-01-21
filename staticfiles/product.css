@@ -1,0 +1,107 @@
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#productInfos {
+    padding-top: 3vw;
+    display: block;
+}
+
+#firstDiv {
+    display: flex;
+    align-items: center;
+}
+
+#productPhoto {
+    margin-left: 3vw;
+    margin-top: 3vw;
+    height: 30vw;
+    width: 45vw;
+    border-radius: 2vw;
+}
+
+#buyButton {
+    border: none;
+    margin-top: 3vw;
+    box-shadow: 0.4vw 0.4vw 0vw 0vw;
+    text-align: center;
+    font-size: 2vw;
+    border-radius: 1.5vw;
+    background-color: rgb(255, 155, 155);
+    width: 45.3vw;
+    height: 5vw;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#buyButton:hover {
+    transform: scale(0.95);
+}
+
+#secondDiv {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#secondDiv h1 {
+    margin-top: 2vw;
+    font-size: 5vw;
+}
+
+#secondDiv ul {
+    list-style: none;
+    padding: 0;
+    font-size: 2vw;
+    display: block;
+    margin: 0;
+    margin-top: -2vw;
+    width: 100%;
+}
+
+#secondDiv ul > li {
+    white-space: nowrap;
+}
+
+@media (orientation: portrait) {
+
+    body {
+        overflow-y: visible;
+    }
+
+    #firstDiv {
+        display: block;
+    }
+
+    #productPhoto {
+        margin: 8vw;
+        margin-top: 3vw;
+        width: 85vw;
+        height: auto;
+    }
+
+    #buyButton {
+        width: 85vw;
+        font-size: 5vw;
+        box-shadow: 1vw 1vw 0vw 0vw;
+        height: 10vw;
+        border-radius: 3vw;
+    }
+
+    #secondDiv h1 {
+        margin-top: 2vw;
+        font-size: 13vw;
+    }
+
+    #secondDiv ul {
+        margin-top: -5vw;
+    }
+
+    #secondDiv ul > li {
+        font-size: 5vw;
+    }
+}
