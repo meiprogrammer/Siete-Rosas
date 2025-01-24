@@ -1,7 +1,7 @@
 body {
     display: block;
-    margin: 0vw 0vw 5vw 0vw;
-    padding: 0vw 0vw 5vw 0vw;
+    margin: 0;
+    padding: 0.75vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-size: cover;
     background-position: cover;
@@ -9,14 +9,19 @@ body {
 }
 
 #navBar {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
+    border-radius: 0.75vw;
+    margin-left: 0.75vw;
+    margin-right: 0.75vw;
+    height: 5vw;
     padding-left: 2vw;
     padding-right: 5vw;
-    height: 5vw;
+    text-align: center;
+    justify-content: space-between;
     background-color: rgb(255, 155, 155);
+    align-items: center;
+    display: flex;
+    padding-left: 2vw;
+    padding-right: 5vw;
 }
 
 #logo {
@@ -53,8 +58,15 @@ body {
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
+        body {
+            padding-top: 2vw;
+        }
         #navBar {
             height: 16vw;
+            padding-right: 3vw;
+            border-radius: 2vw;
+            margin-left: 2vw;
+            margin-right: 2vw;
         }
 
         #logo {
@@ -62,7 +74,7 @@ body {
         }
 
         .navLink {
-            font-size: 5.5vw;
+            font-size: 5vw;
             padding: 0 3vw;
         }
 

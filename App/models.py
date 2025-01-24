@@ -8,7 +8,6 @@ class User(AbstractUser):
 class Products (models.Model):
     name = models.CharField(max_length=34)
     colors = models.JSONField(default=list)
-    ratings = models.JSONField(default=list)
     price = models.IntegerField(default=20)
     id = models.AutoField(primary_key=True)
 

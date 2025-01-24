@@ -63,6 +63,7 @@ def verifyMail(request):
                     email=request.POST["email"],
                     password=request.POST["password"],
                 )
+                new_user.set_password(request.POST["password"])
                 new_user.save()
 
                 del request.session['verify_code']
